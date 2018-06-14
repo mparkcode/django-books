@@ -6,7 +6,10 @@
 <ul>
     {% for book in books %}
     <li>{{book.name}} - {{book.notes}}  {{book.author.email}}</li>
-    <img src="{{MEDIA_URL}}{{book.image}}"></img>
+    <img src="{{MEDIA_URL}}{{book.image}}" width="200px"></img>
     {%endfor%}
 </ul>
+
+
+<a href="{% url 'add_book' %}">Add Book</a>
 {% endblock content %}

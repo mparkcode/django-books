@@ -9,6 +9,4 @@ class Book(models.Model):
     isbn = models.CharField(max_length=254, blank=False)
     notes = models.TextField(blank=False)
     image = models.ImageField(upload_to='images', default="images/default.png")
-    
-    def __str__(self):
-        return self.name
+   
